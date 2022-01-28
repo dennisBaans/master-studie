@@ -1,0 +1,8 @@
+image: itachidhdr/wp-importer:latest
+
+deploy:
+  script:
+    - ls
+    - pwd
+    - cd /usr/src/wp-importer
+    - node app.js --api-version=0.8
