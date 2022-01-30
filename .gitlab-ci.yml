@@ -5,4 +5,4 @@ deploy:
     - ls
     - pwd
     - cd /usr/src/wp-importer
-    - node app.js --api-version=0.8
+    - node app.js --api-version=2.TEILNEHMERNUMMER

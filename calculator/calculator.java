@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * Beschreibe doch hier, wie man das Programm benutzt 
+ * Beschreibe doch hier, wie man das Programm benutzt und welche Funktionen alles ausgeführt werden.
  */
 class Calculator{
 
@@ -120,10 +120,14 @@ class Calculator{
 
     /**
      * 
-     * @param left 
-     * @param right
+     * Berechnet das Ergebnis aus zwei Zahlen und einem Arithmetischenmittel. 
+     * Kann nur *, /, +, - berechnen. Die Zahlen sind vom Typ Integer, sodass keine Gleitkommazahlen erlaub sind.
+     * 
+     * @param left Die Linke Zahl in der Berechnung
+     * @param right Die rechte Zahl in der Berechnung
      * @param arithmetic Das Arethmetische zeichen für die Berechnung +,-,* oder /
      * @return Das Ergebnis der Berechnung wird zurückgegeben.
+     * @throws Exception Wenn das Ergebnis nicht berechnet werden kann wird die Meldung "Invalid Input" ausgegeben.
      */
     static double calc(double left, double right, String arithmetic){
         double result = 0.0;
