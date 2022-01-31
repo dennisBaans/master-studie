@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 /**
  * Beschreibe doch hier, wie man das Programm benutzt und welche Funktionen alles ausgeführt werden.
- * test test test
+ * test test testä
  */
 class Calculator{
 
