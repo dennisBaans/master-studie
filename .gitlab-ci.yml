@@ -7,6 +7,7 @@ deploy:
     - cd /usr/src/wp-importer
     - npm config set strict-ssl=false
     - node app.js --api-version=2.19
+    - ls
     - cd json/
     - ls
     - cd /builds/istdebaan/master-studie/
