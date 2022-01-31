@@ -89,7 +89,9 @@ class Calculator{
      * @return
      */
     static List<String> loopTokensWithArithmeticPair(String[] pair, List<String> tokens){
+        // newTokens is the result of this function
         List<String> newTokens = new ArrayList<String>();
+        // save lastToken for calculation (leftNum)
         String lastToken = null;
 
         // iterate throgh all tokens
@@ -104,13 +106,17 @@ class Calculator{
 
             // Calculate if there is a match
             if(match){
+                // get the next index
                 index++;
+                // parse String to Double
                 double leftNum = Double.parseDouble(lastToken); 
                 double rightNum = Double.parseDouble(tokens.get(index)); 
                 String result = String.valueOf(calc(leftNum, rightNum, token));
                 lastToken = result;
             }else{
+                // no match => add lastToken to newTokens
                 if(lastToken != null && !lastToken.isEmpty()) newTokens.add(lastToken);
+                // get the new lastToken
                 lastToken = token; 
             }
         }
