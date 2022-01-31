@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * Beschreibe doch hier, wie man das Programm benutzt und welche Funktionen alles ausgeführt werden.
  * test test testä hm? a a aa
  */
-class Calculator{
+public class Calculator{
 
     static Scanner scanner = new Scanner(System.in);
     public static void main(String arg[]){
