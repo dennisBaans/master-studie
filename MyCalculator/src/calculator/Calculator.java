@@ -1,4 +1,4 @@
-package calculator;
+package calculator; // Falls hier ein Fehler ist, kann der ignoriert werden
 
 import java.util.Scanner;
 import java.util.StringTokenizer;
@@ -7,8 +7,9 @@ import java.util.ArrayList;
 
 /**
  * Beschreibe doch hier, wie man das Programm benutzt und welche Funktionen alles ausgeführt werden.
+ * test test testä hm? a a aaa
  */
-class Calculator{
+public class Calculator{
 
     static Scanner scanner = new Scanner(System.in);
     public static void main(String arg[]){
@@ -18,7 +19,7 @@ class Calculator{
     /**
      * 
      */
-    static void startCalculator(){
+    public static void startCalculator(){
         System.out.println("Calculator Start");
         String input = readInputFromCLI();
         //String[] arrInput = parseInputToArray(input);
@@ -32,7 +33,7 @@ class Calculator{
      * 
      * @return
      */
-    static String readInputFromCLI(){
+    public static String readInputFromCLI(){
         System.out.println("Enter your calculation (e.g. 2+4*2):");
         return scanner.nextLine(); 
     }
@@ -42,7 +43,7 @@ class Calculator{
      * @param input
      * @return
      */
-    static List<String> parseInputToArray(String input){
+    public static List<String> parseInputToArray(String input){
         List<String> tokens = new ArrayList<String>();
         // Split the String in tokens on (delims) +,-,/ or * and return the delim
         StringTokenizer tokenizer = new StringTokenizer(input, "+-*/", true);
@@ -59,7 +60,7 @@ class Calculator{
      * @return
      * @throws Exception 
      */
-    static double calcController(List<String> tokens){
+    public static double calcController(List<String> tokens){
         // Calculate first * and /, than + and -
         String[][] arithmetics = {{"*","/"},{"+","-"}};
         try{
@@ -88,7 +89,7 @@ class Calculator{
      * @param tokens
      * @return
      */
-    static List<String> loopTokensWithArithmeticPair(String[] pair, List<String> tokens){
+    public static List<String> loopTokensWithArithmeticPair(String[] pair, List<String> tokens){
         // newTokens is the result of this function
         List<String> newTokens = new ArrayList<String>();
         // save lastToken for calculation (leftNum)
@@ -128,6 +129,13 @@ class Calculator{
      * 
      * Berechnet das Ergebnis aus zwei Zahlen und einem Arithmetischenmittel. 
      * Kann nur *, /, +, - berechnen. Die Zahlen sind vom Typ Integer, sodass keine Gleitkommazahlen erlaub sind.
+     * {@code
+     * double left = 2;
+     * double right = 3;
+     * String arithmetic = "+";
+     * double result = calc(left, right, arithmetic);
+     * // result = 5.0
+     * }
      * 
      * @param left Die Linke Zahl in der Berechnung
      * @param right Die rechte Zahl in der Berechnung
@@ -135,7 +143,7 @@ class Calculator{
      * @return Das Ergebnis der Berechnung wird zurückgegeben.
      * @throws Exception Wenn das Ergebnis nicht berechnet werden kann wird die Meldung "Invalid Input" ausgegeben.
      */
-    static double calc(double left, double right, String arithmetic){
+    public static double calc(double left, double right, String arithmetic){
         double result = 0.0;
         try{
             switch(arithmetic){
